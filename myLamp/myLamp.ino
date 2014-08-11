@@ -2,11 +2,12 @@
 const int LED = 11;
 const int BUTTON = 7;
 int bright = 0;
-boolean iterater = true;
 int pushTime = 0;
 int state = 0;
 int old_state = 0;
 boolean isBright = false;
+boolean iterater = true;
+
 void setup(){
   pinMode(LED, OUTPUT);
   pinMode(BUTTON, INPUT);
@@ -32,6 +33,7 @@ void brightness(){
     }
   }
 }
+
 void light(){
   if(isBright){
     digitalWrite(LED, LOW);
@@ -54,6 +56,7 @@ void pushCounter(){
     delay(10);
   }
 }
+
 void loop(){
   state = digitalRead(BUTTON);
   pushCounter();
