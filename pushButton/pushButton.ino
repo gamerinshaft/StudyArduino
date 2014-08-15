@@ -13,11 +13,13 @@ void setup() {
 
 void loop() {
   val = digitalRead(BUTTON);
-  if(val == HIGH && state == 0 && val != val_old){
+  // if(val == HIGH && state == 0 && val != val_old){
+  if(val == HIGH){
     digitalWrite(LED, HIGH);
     delay(5);
     state = 1;
-  }else if(val == HIGH && state == 1 && val != val_old){
+  // }else if(val == HIGH && state == 1 && val != val_old){
+  }else{
     digitalWrite(LED, LOW);
     delay(5);
     state = 0;

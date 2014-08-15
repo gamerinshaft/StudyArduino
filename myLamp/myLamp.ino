@@ -7,6 +7,7 @@ int state = 0;
 int old_state = 0;
 boolean isBright = false;
 boolean iterater = true;
+unsigned long startTime = 0;
 
 void setup(){
   pinMode(LED, OUTPUT);
